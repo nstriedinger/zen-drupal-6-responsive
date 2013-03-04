@@ -1,0 +1,117 @@
+/**
+ * @file
+ * RTL companion for the modular-styles.css file.
+ */
+
+/* =============================================================================
+   Branding header
+   ========================================================================== */
+
+.header--logo { /* Wrapping link for logo */
+  float: right;
+}
+
+.header--secondary-menu {
+  float: left;
+}
+
+/* =============================================================================
+   Navigation bar
+   ========================================================================== */
+
+#navigation .links, /* Main menu and secondary menu links */
+#navigation .menu { /* Menu block links */
+  text-align: right;
+}
+
+#navigation .links li,
+#navigation .menu li { /* A simple method to get navigation links to appear in one line. */
+  float: right;
+  padding: 0 0 0 10px;
+}
+
+/* =============================================================================
+   Messages
+   ========================================================================== */
+
+.messages,
+.messages-status,
+.messages-warning,
+.messages-error {
+  padding: 10px 50px 10px 10px;
+  background-position: 99% 8px;
+}
+
+/* =============================================================================
+   Tabs
+   ========================================================================== */
+
+.tabs-primary--tab,
+.tabs-primary--tab-active,
+.tabs-secondary--tab,
+.tabs-secondary--tab-active {
+  float: right;
+}
+
+/* =============================================================================
+   Inline styles
+   ========================================================================== */
+
+.inline li { /* List of links */
+  display: inline-block; /* Bug in Safari causes display: inline to fail. */
+  padding: 0 0 0 1em;
+}
+
+span.field-label { /* The inline field label used by the Fences.module */
+  padding: 0 0 0 1em;
+}
+
+/* =============================================================================
+   "More" links
+   ========================================================================== */
+
+.more-link {
+  text-align: left;
+}
+
+.more-help-link {
+  text-align: left;
+}
+
+.more-help-link a {
+  background-position: 100% 50%;
+  padding: 1px 20px 1px 0;
+}
+
+/* =============================================================================
+   Menus
+   ========================================================================== */
+
+.menu--collapsed {
+  list-style-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHAQMAAAD+nMWQAAAABlBMVEX///8AAABVwtN+AAAAAXRSTlMAQObYZgAAABNJREFUCB1j4GASYFJgcmD+A4IADUIDfIUMT4wAAAAASUVORK5CYII=');
+  *list-style-image: url(../images/menu-collapsed-rtl.png);
+}
+
+/* =============================================================================
+   Forms
+   ========================================================================== */
+
+#user-login-form { /* Drupal's default login form block */
+  text-align: right;
+}
+
+html.js #user-login-form li.openid-link,
+#user-login-form li.openid-link {
+  margin-left: 0;
+  margin-right: -20px; /* Un-do some of the padding on the ul list. */
+}
+
+/*
+ * Drupal admin tables
+ */
+
+form th {
+  text-align: right;
+  padding-left: 1em;
+  padding-right: 0;
+}

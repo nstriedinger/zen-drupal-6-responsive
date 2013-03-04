@@ -1,0 +1,20 @@
+/**
+ * @file
+ * RTL companion for the global-states.css file.
+ */
+
+/* =============================================================================
+   Drupal form widgets
+   ========================================================================== */
+
+html.js .collapsible .fieldset-legend {
+  background-position: 98% 75%;
+  padding-left: 0;
+  padding-right: 15px;
+}
+
+html.js .collapsed .fieldset-legend {
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHAQMAAAD+nMWQAAAABlBMVEX///8AAABVwtN+AAAAAXRSTlMAQObYZgAAABNJREFUCB1j4GASYFJgcmD+A4IADUIDfIUMT4wAAAAASUVORK5CYII=');
+  *background-image: url(../images/menu-collapsed-rtl.png);
+  background-position: 98% 50%;
+}

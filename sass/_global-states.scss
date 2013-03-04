@@ -1,0 +1,107 @@
+/**
+ * @file
+ * SMACSS States
+ *
+ * Adds state-based styling. Global state rules are those that apply only during
+ * certain states of the page and have a JavaScript dependency. For more
+ * information, see https://smacss.com/book/type-state
+ */
+
+/* =============================================================================
+   Drupal form widgets
+   ========================================================================== */
+
+/**
+ * Autocomplete.
+ *
+ * @see autocomplete.js
+ */
+
+#autocomplete .selected { /* Suggestion list */
+  background: #0072b9;
+  color: #fff;
+}
+
+/**
+ * Collapsible fieldsets.
+ *
+ * @see collapse.js
+ */
+
+.fieldset-legend {
+  html.js .collapsible & {
+    background-image: inline-image("menu-expanded.png");
+    @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+      *background-image: url(../images/menu-expanded.png);
+    }
+    background-position: 5px 65%; /* LTR */
+    background-repeat: no-repeat;
+    padding-left: 15px; /* LTR */
+  }
+  html.js .collapsed & {
+    background-image: inline-image("menu-collapsed.png"); /* LTR */
+    @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+      *background-image: url(../images/menu-collapsed.png); /* LTR */
+    }
+    background-position: 5px 50%; /* LTR */
+  }
+
+  .summary {
+    color: #999;
+    font-size: 0.9em;
+    margin-left: 0.5em;
+  }
+}
+
+/**
+ * TableDrag behavior.
+ *
+ * @see tabledrag.js
+ */
+
+tr.drag {
+  background-color: #fffff0;
+}
+
+tr.drag-previous {
+  background-color: #ffd;
+}
+
+.tabledrag-toggle-weight {
+  font-size: 0.9em;
+}
+
+/**
+ * TableSelect behavior.
+ *
+ * @see tableselect.js
+ */
+
+tr.selected td {
+  background: #ffc;
+}
+
+/**
+ * Progress bar.
+ *
+ * @see progress.js
+ */
+
+.progress {
+  font-weight: bold;
+
+  .bar {
+    background: #ccc;
+    border-color: #666;
+    margin: 0 0.2em;
+    @include border-radius(3px);
+  }
+
+  .filled {
+    background-color: #0072b9;
+    background-image: inline-image("progress.gif");
+    @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+      *background-image: url(../images/progress.gif);
+    }
+  }
+}

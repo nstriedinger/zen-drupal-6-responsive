@@ -1,0 +1,25 @@
+/**
+ * @file
+ * Styles are organized using the SMACSS technique. @see http://smacss.com/book/
+ *
+ * When you turn on CSS aggregation at admin/config/development/performance, all
+ * of these @include files will be combined into a single file.
+ */
+
+/* Base rules */
+@import "normalize.css";
+
+/* Layout rules */
+@import "layout-responsive.css";
+
+/* Module rules */
+@import "modular-styles.css";
+/* Optionally, add your own modular stylesheets here. */
+@import "print.css";
+
+/* Global state rules */
+@import "global-states.css";
+
+/* Theme rules */
+/* @import "theme-A.css"; */
+/* @import "theme-B.css"; */
