@@ -37,8 +37,10 @@
 </head>
 <body class="<?php print $classes; ?>">
 
-  <?php if ($primary_links): ?>
-    <div id="skip-link"><a href="#main-menu"><?php print t('Jump to Navigation'); ?></a></div>
+  <?php if ($skip_link_text && $skip_link_anchor): ?>
+    <p id="skip-link">
+      <a href="#<?php print $skip_link_anchor; ?>" class="element-invisible element-focusable"><?php print $skip_link_text; ?></a>
+    </p>
   <?php endif; ?>
 
   <div id="page-wrapper">
